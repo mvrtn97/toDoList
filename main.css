@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100;12..72,200;12..72,400;12..72,500;12..72,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+}
+
+/* wygląd tła i wyśrodkowanie apki */                                             /* Kolejnosc jak w htmlu - container -> todo-list -> header itd... */
+.container {
+  background: linear-gradient(#bb2ca3, #d7e985);
+  flex-grow: 1;
+  display: flex;
+  /*flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+/* wygląd, rozmiar apki */
+.todo-list {
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  border-radius: 10px; 
+  height: 600px;
+  box-shadow: 0px 0px 20px white;
+}
+
+.header {
+  padding: 2em;
+}
+/* nagłówek */
+.header h1 {
+  font-family: 'Truculenta', sans-serif;
+  font-size: 700;
+  color:#6d108b;
+ text-align: center;
+ text-shadow: 0 0 10px rgb(241, 255, 40), 0 0 20px rgb(255, 78, 116), 0 0 42px rgb(255, 61, 223), 0 0 82px rgb(255, 0, 119),0 0 92px rgb(255, 0, 34);
+}
+
+.list { 
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: greenyellow;
+  text-decoration: line-through;
+}
+
+.list2 {
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list2, .list li {
+  padding: 10px;
+  list-style: none;
+}
+
+.list2 button, .list button, input {
+  padding: 2px 8px 2px 8px;
+  float: right;
+  margin-left: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.list2 button:hover,
+.list2 button:active {
+  background:rgb(241, 255, 40);
+}
+
+.add-task {
+  display: flex;
+  justify-content: center;
+}
+
+.add-task input {
+  width: 220px;
+  font-family: 'Truculenta', sans-serif;
+  font-size: 20px;
+  border: 1px solid rgb(234, 24, 253);
+  outline: none;
+  border-radius: 12px;
+}
+
+.add-task button {
+  background:rgb(234, 24, 253);
+  color:rgb(255, 255, 255) ;
+  border: none;
+  padding: 1em;
+  border-radius: 18px;
+}
+
+.add-task button:hover,
+.add-task button:active {
+  background: rgb(119, 255, 85);
+}
+
+
+
+
