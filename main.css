@@ -50,6 +50,7 @@ body {
   align-items: center;
   background: greenyellow;
   text-decoration: line-through;
+  padding: 10px;
 }
 
 ul {
@@ -66,13 +67,14 @@ ul {
 }
 
 .list2, .list li {
+  display: flex;
   padding: 10px;
   list-style: none;
 }
 
 .list2 button, .list button, input {
-  padding: 2px 8px 2px 8px;
   float: right;
+  padding: 2px 8px 2px 8px;
   margin-left: 10px;
   border-radius: 10px;
   border: none;
