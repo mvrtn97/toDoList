@@ -8,7 +8,6 @@ let line = document.getElementsByClassName("list");
 let taskList = [];
 let count = 0;
 
-
 function addElement() {
   let newItem = document.createElement('li');
   let delBtn = document.createElement('button');
@@ -19,6 +18,13 @@ function addElement() {
   editBtn.innerHTML = "edit";
   let input = inputElement.value;
 
+  /* skrócenie kodu (powtarzaly sie te 3 linijki) */
+  function append(item){
+    item.appendChild(delBtn);
+    item.appendChild(editBtn);
+    item.appendChild(checkBtn);
+  }
+
   if(input === "") {
     alert("Enter some value");
   }
@@ -28,9 +34,7 @@ function addElement() {
 
   newItem.innerHTML += input;
   listElement.insertAdjacentElement("beforeend", newItem);
-  newItem.appendChild(delBtn);
-  newItem.appendChild(editBtn);
-  newItem.appendChild(checkBtn);
+  append(newItem);
   taskList.push(input);
   newItem.className = "list2";
 
@@ -56,10 +60,7 @@ function addElement() {
       itemToEdit.innerHTML = window.prompt("Enter the new task!");
     }
     while(itemToEdit.innerHTML === "");
-    
-    itemToEdit.appendChild(delBtn);
-    itemToEdit.appendChild(editBtn);
-    itemToEdit.appendChild(checkBtn);
+    append(itemToEdit);
     })
 
   checkBtn.addEventListener('click', function(e){
