@@ -51,10 +51,16 @@ function addElement() {
   editBtn.addEventListener('click', function(e){
     let itemToEdit = e.target.closest('li');
     itemToEdit.innerHTML = window.prompt("Enter the new task!");
+    do{
+      alert("Enter some value");
+      itemToEdit.innerHTML = window.prompt("Enter the new task!");
+    }
+    while(itemToEdit.innerHTML === "");
+    
     itemToEdit.appendChild(delBtn);
     itemToEdit.appendChild(editBtn);
     itemToEdit.appendChild(checkBtn);
-  })
+    })
 
   checkBtn.addEventListener('click', function(e){
     let checkedItem = e.target.closest('li');
