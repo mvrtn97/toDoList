@@ -19,6 +19,11 @@ function addElement() {
   editBtn.innerHTML = "edit";
   let input = inputElement.value;
 
+  if(input === "") {
+    alert("Enter some value");
+  }
+  else{
+
   count += 1;
 
   newItem.innerHTML += input;
@@ -34,7 +39,7 @@ function addElement() {
   
   totalTasks.innerHTML = count;
 
-  
+  }
 
   delBtn.addEventListener('click', function(e){
     let itemToRemove = e.target.closest('li');  /* biezaca linia */
